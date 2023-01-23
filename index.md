@@ -14,6 +14,3 @@ Some of my recent research and collaborations include:
 * <b>Fine-Grained Misinformation Detection</b>: reasoning across multimedia and background knowledge (ACL'21 <a href="http://scholar.google.es/citations?user=eUae2K0AAAAJ" target="_blank">paper</a>); cross-document misinformation detection (NAACL'22 <a href="https://aclanthology.org/2022.naacl-main.40/" target="_blank">paper</a>); battlefront of fake and biased news (KDD"22 and AACL'22 <a href="https://dl.acm.org/doi/abs/10.1145/3534678.3542615" target="_blank">tutorial</a>)
 * <b>Knowledge Reasoning</b>: Kompare (KDD'21 <a href="https://dl.acm.org/doi/abs/10.1145/3447548.3467128" target="_blank">paper</a>), COVID KG Construction and Drug Report Generation (NAACL'21 Best Demo <a href="https://aclanthology.org/2021.naacl-demos.8/" target="_blank">paper</a>), NormSAGE (<a href="https://arxiv.org/abs/2210.08604" target="_blank">preprint</a> - NEW)
 
-
-<sub>其它：成年后了解到，我与1930-1939年主政一方的民国二号人物之间的亲戚关系。当中有值得分享和思索的事情与期望，依然适用于当下。[<a href="https://yrf1.github.io/history/" target="_blank">更多</a>]</sub>
-
