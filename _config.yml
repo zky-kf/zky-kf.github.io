@@ -1,5 +1,5 @@
 theme: minima
-title:            Yi's website
+title:            开封张开元的个人网页
 description:      Welcome to my site.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              https://zky-kf.github.io
@@ -7,7 +7,7 @@ disqus_shortname: yfung
 
 # Owner/author information
 owner:
-  name:           Yi Ren Fung
+  name:           张开元
   avatar:         yfung.png
   bio:            I grew up from the Greater Boston area. Currently in Champaign, IL. Passionate about NLP, IE/KG, tech, and content creation while exploring the world.
   email:          yifung2@illinois.edu
