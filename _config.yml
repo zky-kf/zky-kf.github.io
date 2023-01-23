@@ -1,0 +1,65 @@
+title:            Yi's website
+description:      Welcome to my site.
+# Your site's domain goes here. Leave localhost server or blank when working locally.
+url:              https://yrf1.github.io
+disqus_shortname: yfung
+
+# Owner/author information
+owner:
+  name:           Yi Ren Fung
+  avatar:         yfung.png
+  bio:            I grew up from the Greater Boston area. Currently in Champaign, IL. Passionate about NLP, IE/KG, tech, and content creation while exploring the world.
+  email:          yifung2@illinois.edu
+  # Social networking links are used in author-bio sidebar. Update and remove as you like.
+  twitter: YiFung10
+  linkedin: yifung1
+  google_scholar: eUae2K0AAAAJ
+  google_plus: 113718226018314522413
+  github: yrf1
+  youtube: channel/UCux_LLKhP3_tSnGYfpGx6lg
+# Analytics and webmaster tools stuff goes here
+google_analytics: UA-52736040-1
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: CV
+    url: /cv/
+  - title: Publications
+    url: /publications/
+  - title: Code
+    url: /code/
+  - title: Blog
+    url: /blog/
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Europe/Zurich
+future:      true
+#pygments:    true
+highlighter: rouge
+markdown:    kramdown
+kramdown:
+  extensions: ["strikethrough"]
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+  coderay:
+    coderay_line_numbers:
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
