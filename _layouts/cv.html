@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+<style>
+  .bottom-three {
+     margin-bottom: 1.5cm;
+   }
+  .bottom-small {
+     margin-bottom: 1cm;
+   }
+</style>
+</head>
+
+<body class="page">
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http://' %}
+      "{{ page.image.feature }}"
+    {% elsif page.image.feature contains 'https://' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
+{% endif %}
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <div class="article-wrap">
+      
+    <p align="center" class=bottom-small><img src="{{ site.url }}/images/CV/study2.png" alt="Education" width="70" height="70"></p>
+    <p align="center" style=" margin-bottom: 35px;">&#8226 I'm a <strong> 3rd year CS Ph.D. student </strong> at <strong> <a href="https://www.cics.umass.edu" target="_blank">UIUC</a> </strong>. I've been <strong>awarded</strong> the department-wide Andrew & Shana Laursen <strong>fellowship</strong>, which funds three top PhD students each year.</p>
+    <p align="center" style=" margin-bottom: 35px;">&#8226 I'm a proud and dedicated member of the <strong><a href="https://github.com/Information-Fusion-Lab-Umass/" target="_blank">Blender Lab</a></strong>, headed by <strong> <a href="http://blender.cs.illinois.edu/hengji.html" target="_blank">Prof. Heng Ji</a> </strong>.</p>
+    <p align="center" class="bottom-three">&#8226 I received my joint <strong>M.S.</strong>/<strong>B.S. </strong> degree previously from <a href="https://www.cics.umass.edu" target="_blank">UMass Amherst</a>.</p>
+      
+    <p align="center" class=bottom-small><img src="{{ site.url }}/images/CV/business.png" alt="Work Experience" width="70" height="70"></p>
+    <p align="center" style=" margin-bottom: 35px;">&#8226 As a graduate student <strong>researcher</strong>, I have developed models and driven system integrations that <strong>score top (1st place)</strong> at the official <strong>evaluations</strong> of <strong>multi-million dollar grant programs</strong> (e.g., CCU), outperforming many other top universities/institutions.
+    <p align="center" style=" margin-bottom: 35px;">&#8226 As <strong>Teaching Assistant</strong>, I have helped taught several high-demand graduate level courses, including <strong><a href="http://blender.cs.illinois.edu/hengji/teaching.html" target="_blank">CS598 Advanced NLP</a></strong> and <strong><a href="https://people.cs.umass.edu/~domke/courses/compsci589/" target="_blank">CS589 Machine Learning</a></strong>.</p>
+    <p align="center" class="bottom-three">&#8226 I am a former <strong> Amazon applied scientist intern</strong> and <strong>Microsoft software engineer intern</strong>.</p>
+
+    <p align="center" class=bottom-small><img src="{{ site.url }}/images/CV/computer2.png" alt="Computer Skills" width="80" height="80"></p>
+    <p align="center" style=" margin-bottom: 35px;">&#8226 I'm <strong>committed to academic service</strong>, and have <strong>served</strong> with pleasure <strong>on</strong> the <strong>review committee</strong> for various journals and conferences, such as <strong><a href="https://direct.mit.edu/coli" target="_blank">Computational Linguistics</a></strong>, <strong><a href="https://www.journals.elsevier.com/pattern-recognition" target="_blank">Pattern Recognition</a></strong>, <strong><a href="https://aclanthology.org/venues/acl/" target="_blank">ACL</a></strong>, and <strong><a href="https://nips.cc/" target="_blank">NeurIPS</a></strong>. 
+
+    <p align="center">&#8226 Whenever I get the chance, I like to <strong>mess around</strong> with existing work/code, <strong>think</strong> of ideas, <strong>prototype+evaluate</strong> and (hopefully) <strong>expand</strong>. <strong>Repeat</strong>.</p>
+    <br>
+    {{ content }}
+    </div><!-- /.article-wrap -->
+    {% if site.disqus_shortname and page.comments %}
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+  </article>
+</div><!-- /#index -->
+
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}          
+
+</body>
+</html>

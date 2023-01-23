@@ -1,0 +1,432 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+{% include _head.html %}
+</head>
+
+<body class="page">
+<style>
+    /*********************************
+     The list of publication items
+     *********************************/
+/* The list of items */
+.biblist { }
+
+/* The item */
+.biblist li { }
+
+/* You can define custom styles for plstyle field here. */
+
+
+/*************************************
+ The box that contain BibTeX code
+ *************************************/
+div.noshow { display: none; }
+div.bibtex {
+	margin-right: 0%;
+	margin-top: 1.2em;
+	margin-bottom: 1em;
+	border: 1px solid silver;
+	padding: 0em 1em;
+	background: #ffffee;
+}
+div.bibtex pre { font-size: 75%; overflow: auto;  width: 100%; padding: 0em 0em;}</style>
+<script type="text/javascript">
+    <!--
+    // Toggle Display of BibTeX
+    function toggleBibtex(articleid) {
+        var bib = document.getElementById('bib_'+articleid);
+        if (bib) {
+            if(bib.className.indexOf('bibtex') != -1) {
+                bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex';
+            }
+        } else {
+            return;
+        }
+    }
+-->
+    </script>
+
+{% include _browser-upgrade.html %}
+
+{% include _navigation.html %}
+
+{% if page.image.feature %}
+  <div class="image-wrap">
+  <img src=
+    {% if page.image.feature contains 'http://' %}
+      "{{ page.image.feature }}"
+    {% elsif page.image.feature contains 'https://' %}
+      "{{ page.image.feature }}"
+    {% else %}
+      "{{ site.url }}/images/{{ page.image.feature }}"
+    {% endif %}
+  alt="{{ page.title }} feature image">
+  {% if page.image.credit %}
+    <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
+  {% endif %}
+  </div><!-- /.image-wrap -->
+{% endif %}
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    {% include _author-bio.html %}
+  </div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <div class="article-wrap">
+      {{ content }}
+
+<h4 style="margin-bottom:0px;padding-top:10px;">Journal Papers [Preprint]</h4>
+<ul class="biblist">
+<li ><p>
+Y.R. Fung, <a href="https://tuhinjubcse.github.io/" target="_blank">T. Chakraborty</a>, G. Hao, <a href="https://owenrambow.com/" target="_blank">O. Rambow</a>, <a href="http://www.cs.columbia.edu/~smara/" target="_blank">S. Muresan</a>, and <a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">H. Ji</a>
+<br><b>NormSAGE: Multi-Lingual Multi-Cultural Norm Discovery from Conversations On-the-Fly</b>
+<br><i>TBA</i>, 2023.<br />
+<a href="javascript:toggleBibtex('fung2023')">[BibTeX]</a>
+<a href="https://arxiv.org/abs/2210.08604" target="_blank">[PDF]</a> <a href = "https://github.com/blender-nlp"  target="_blank">
+[Project Page]</a>
+</p>
+<div id="bib_fung2023" class="bibtex noshow">
+<pre>
+@article{fung2023,
+  title={NormSAGE: Multi-Lingual Multi-Cultural Norm Discovery from Conversations On-the-Fly},
+  author={Fung, Yi R. and Chakraborty, Tuhin and Rambow, Owen. and Muresan, Smaranda and Ji, Heng},
+  journal={Arxiv},
+  year={2022}
+}
+</pre>
+</div>
+</li>
+
+</ul >
+
+
+<h4 style="margin-bottom:0px;padding-top:10px;">Conference Papers</h4>
+<!-- Generated from JabRef by PubList by Truong Nghiem at 11:44 on 2015.09.10. -->
+<ul class="biblist">
+
+<li ><p>
+K. Yang, C. Yu, Y.R. Fung, <a href="https://limanling.github.io/" target="_blank">M. Li</a>, and <a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">H. Ji</a>
+<br><b>ADEPT: A DEbiasing PrompT Framework</b>
+<br><i>AAAI</i>, 2023.<br />
+<a href="javascript:toggleBibtex('yang2023')">[BibTeX]</a>
+<a href="https://arxiv.org/abs/2211.05414" target="_blank">[PDF]</a> <a href = "https://github.com/EmpathYang/ADEPT"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_yang2023" class="bibtex noshow">
+<pre>
+@article{yang2023,
+  title={ADEPT: A DEbiasing PrompT Framework},
+  author={Yang, Ke and Yu, Charles and Fung, Yi R. and Li, Manling and Ji, Heng},
+  journal={AAAI},
+  year={2023}
+}
+</pre>
+</div>
+</li>
+
+<li ><p>
+<a href="https://gangiswag.github.io" target="_blank">R.G. Reddy</a>, S.C. Chinthakindi, Z. Wang, <a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, <a href="https://scholar.google.com/citations?user=pxc_-XYAAAAJ" target="_blank">M. Palmer</a>, <a href="https://scholar.google.com/citations?hl=en&user=DfXsKZ4AAAAJ" target="_blank">P. Nakov</a>, and <a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a>
+<br><b>NewsClaims: A New Benchmark for Claim Detection from News with Attribute Knowledge</b><br>
+<i>EMNLP</i>, 2022.
+<br />
+<a href="javascript:toggleBibtex('Reddy2022a')">[BibTeX]</a>
+<a href="https://arxiv.org/abs/2112.08544" target="_blank">[PDF]</a> <a href = "https://github.com/blender-nlp/NewsClaims"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_Reddy2022a" class="bibtex noshow">
+<pre>
+@article{reddy2021newsclaims,
+  title={NewsClaims: A New Benchmark for Claim Detection from News with Background Knowledge},
+  author={Reddy, Revanth Gangi and Chinthakindi, Sai and Wang, Zhenhailong and Fung, Yi R and Conger, Kathryn S and Elsayed, Ahmed S and Palmer, Martha and Ji, Heng},
+  journal={EMNLP},
+  year={2021}
+}
+</pre>
+</div>
+</li>
+
+<li ><p>
+<a href="https://gangiswag.github.io" target="_blank">R.G. Reddy</a>, S.C. Chinthakindi, <a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, K. Small, and <a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a>
+<br><b>A Zero-Shot Claim Detection Framework using Question Answering</b><br>
+<i>COLING</i>, 2022.
+<br />
+<a href="javascript:toggleBibtex('Reddy2022b')">[BibTeX]</a>
+<a href="https://blender.cs.illinois.edu/paper/claimqa2022.pdf" target="_blank">[PDF]</a> <a href = "https://github.com/Information-Fusion-Lab-Umass/flare/blob/master/README.md"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_Reddy2022b" class="bibtex noshow">
+<pre>
+@article{reddy2022newsclaimsQA,
+  title={A Zero-Shot Claim Detection Framework using Question Answering},
+  author={Reddy, Revanth Gangi and Chinthakindi, Sai and Fung, Yi R and Small, Kevin and Ji, Heng},
+  journal={COLING},
+  year={2022}
+}
+</pre>
+</div>
+</li>
+
+<li ><p>
+<a href="https://shirley-wu.github.io/" target="_blank">X. Wu</a>, <a href="https://steevehuang.netlify.app/" target="_blank">K.H. Huang</a>, Y.R. Fung, <a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a>
+<br><b>Cross-document Misinformation Detection based on Event Graph Reasoning</b><br>
+<i>The North American Chapter of the Association for Computational Linguistics (NAACL) Conference</i>,
+2022.
+<br />
+<a href="javascript:toggleBibtex('wu2022infosurgeon')">[BibTeX]</a>
+<a href="https://aclanthology.org/2022.naacl-main.40/" target="_blank">[PDF]</a> <a href = "https://github.com/shirley-wu/cross-doc-misinfo-detection"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_wu2022infosurgeon" class="bibtex noshow">
+<pre>
+@inproceedings{wu2022infosurgeon,
+  title={Cross-document Misinformation Detection based on Event Graph Reasoning},
+  author={Wu, Xueqing and Huang, Kung-Hsiang and Fung, Yi R. and Ji, Heng},
+  booktitle={Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics - Human Language Technologies (NAACL-HLT2022)},
+  year={2022}
+}
+</pre>
+</div>
+</li>
+
+<li ><p>
+Y.R. Fung, <a href="https://people.cs.pitt.edu/~chris/" target="_blank">C. Thomas</a>, <a href="https://gangiswag.github.io" target="_blank">R.G. Reddy</a>, S. Polisetty, <a href="https://blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a>, <a href="https://www.ee.columbia.edu/~sfchang/" target="_blank">S.F. Chang</a>, M. Bansal, and A. Sil
+<br><b>InfoSurgeon: Cross-Media Fine-grained Information Consistency Checking for Fake News Detection</b><br>
+<i>The Association for Computational Linguistics (ACL) Conference</i>,
+2021.
+<br />
+<a href="javascript:toggleBibtex('fung2021infosurgeon')">[BibTeX]</a>
+<a href="http://proceedings.mlr.press/v106/devarakonda19a/devarakonda19a.pdf" target="_blank">[PDF]</a> <a href = "https://github.com/Information-Fusion-Lab-Umass/flare/blob/master/README.md"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_fung2021infosurgeon" class="bibtex noshow">
+<pre>
+@inproceedings{fung2021infosurgeon,
+  title={Infosurgeon: Cross-media fine-grained information consistency checking for fake news detection},
+  author={Fung, Yi and Thomas, Christopher and Reddy, Revanth Gangi and Polisetty, Sandeep and Ji, Heng and Chang, Shih-Fu and McKeown, Kathleen and Bansal, Mohit and Sil, Avirup},
+  booktitle={Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)},
+  pages={1683--1698},
+  year={2021}
+}
+</pre>
+</div>
+</li>
+	
+<li ><p>
+L. Liu, <a href="boxindu2.web.illinois.edu" target="_blank">B. Du</a>, Y.R. Fung, <a href="blender.cs.illinois.edu/hengji.html" target="_blank">Heng Ji</a>, and <a href="http://tonghanghang.org/" target="_blank">H. Tong</a>
+<br><b>KompaRe: A Knowledge Graph Comparative Reasoning System</b><br>
+<i>Special Interest Group on Knowledge Discovery and Data Mining(SIGKDD) Conference</i>,
+2021.
+<br />
+<a href="javascript:toggleBibtex('liu2021kompare')">[BibTeX]</a>
+<a href="https://dl.acm.org/doi/abs/10.1145/3447548.3467128" target="_blank">[PDF]</a> <a href = "https://github.com/Information-Fusion-Lab-Umass/flare/blob/master/README.md"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_liu2021kompare" class="bibtex noshow">
+<pre>
+@inproceedings{liu2021kompare,
+  title={KompaRe: A Knowledge Graph Comparative Reasoning System},
+  author={Liu, Lihui and Du, Boxin and Fung, Yi Ren and Ji, Heng and Xu, Jiejun and Tong, Hanghang},
+  booktitle={Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery \& Data Mining},
+  pages={3308--3318},
+  year={2021}
+}
+</pre>
+</div>
+</li>
+	
+<li ><p>
+S.T. Deja, J.Y. Wu, <a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, and <a href="https://www.cics.umass.edu/people/fiterau-brostean-madalina" target="_blank">M. Fiterau</a>
+<br><b>FLARe: Forecasting by Learning Anticipated Representations</b><br>
+<i>Machine Learning for Healthcare (MLHC) Conference</i>,
+2019.
+<br />
+<a href="javascript:toggleBibtex('Maninis2018b')">[BibTeX]</a>
+<a href="http://proceedings.mlr.press/v106/devarakonda19a/devarakonda19a.pdf" target="_blank">[PDF]</a> <a href = "https://github.com/Information-Fusion-Lab-Umass/flare/blob/master/README.md"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_Maninis2018b" class="bibtex noshow">
+<pre>
+@inproceedings{Devara2019,
+  author = {S.T. Devarakonda and J.Y. Wu and Y.R. Fung and M. Fiterau},
+  title = {FLARe: Forecasting by Learning Anticipated Representations},
+  booktitle = {Machine Learning for Healthcare},
+  year = {2019}
+}
+</pre>
+</div>
+</li>
+
+      </ul  >
+
+<h4 style="margin-bottom:0px;padding-top:10px;">Demo Papers</h4>
+
+<!-- Generated from JabRef by PubList by Truong Nghiem at 10:08 on 2017.01.16. -->
+<ul class="biblist">
+
+<!-- Item: Farre2017 -->
+<li ><p>
+<a href="https://eaglew.github.io/cv/" target="_blank">Q.Y. Wang</a>, <a href="https://limanling.github.io/" target="_blank">M. Li</a>, <a href="https://xuanwang91.github.io/" target="_blank">X. Wang</a>, Y. Lin, <a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, <a href="https://groups.cs.umass.edu/shlomo/" target="_blank">Heng Ji</a>, <a href="https://scholar.google.com/citations?user=Kv9AbjMAAAAJ" target="_blank">J. Han</a>, S.F. Chang, M. Palmer, and <a href="https://scholar.google.com/citations?user=n8gJ2MgAAAAJ" target="_blank">C. Voss</a>
+<br><b>COVID-19 literature knowledge graph construction and drug repurposing report generation</b><br>
+<i>Conference of the North American Chapter of the Association for Computational Linguistics (NAACL) Best Demo Award</i>,
+2021.
+<br />
+<a href="javascript:toggleBibtex('wang2020covid')">[BibTeX]</a>
+<a href="https://aclanthology.org/2021.naacl-demos.8/" target="_blank">[PDF]</a> <a href="http://blender.cs.illinois.edu/covid19/"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_wang2020covid" class="bibtex noshow">
+<pre>
+@article{wang2020covid,
+  title={COVID-19 literature knowledge graph construction and drug repurposing report generation},
+  author={Wang, Qingyun and Li, Manling and Wang, Xuan and Parulian, Nikolaus and Han, Guangxing and Ma, Jiawei and Tu, Jingxuan and Lin, Ying and Zhang, Haoran and Liu, Weili and others},
+  journal={arXiv preprint arXiv:2007.00576},
+  year={2020}
+}
+</pre>
+</div>
+</li>
+
+<li ><p>
+<a href="https://www.haoyangwen.com/" target="_blank">H. Wen</a>, <a href="https://people.cs.umass.edu/~freedman/" target="_blank">Y. Lin</a>, <a href="https://laituan.io/" target="_blank">T. Lai</a>, <a href="https://panx27.github.io/homepage/" target="_blank">X. Pan</a>, <a href="https://people.cs.umass.edu/~freedman/" target="_blank">S. Li</a>, <a href="https://people.cs.umass.edu/~freedman/" target="_blank">X. Lin</a>, <a href="https://limanling.github.io/" target="_blank">M. Li</a>, <a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, <a href="http://www.cs.columbia.edu/~vondrick/" target="_blank">C. Vondrick</a>, J.Han, <a href="https://www.cis.upenn.edu/~danroth/" target="_blank">D. Roth</a>, S.F. Chang, and <a href="https://groups.cs.umass.edu/shlomo/" target="_blank">Heng Ji</a>
+<br><b>RESIN: A Dockerlized Schema-Guided Cross-document Cross-lingual Cross-media Information Extraction and Event Tracking System</b><br>
+<i> Conference of the North American Chapter of the Association for Computational Linguistics (NAACL)</i>,
+2021.
+<br />
+<a href="javascript:toggleBibtex('wen2021resin')">[BibTeX]</a>
+<a href="https://aclanthology.org/2021.naacl-demos.16/" target="_blank">[PDF]</a> <a href="https://github.com/RESIN-KAIROS/RESIN-pipeline-public"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_wen2021resin" class="bibtex noshow">
+<pre>
+@inproceedings{wen2021resin,
+  title={RESIN: A Dockerized Schema-Guided Cross-document Cross-lingual Cross-media Information Extraction and Event Tracking System},
+  author={Wen, Haoyang and Lin, Ying and Lai, Tuan and Pan, Xiaoman and Li, Sha and Lin, Xudong and Zhou, Ben and Li, Manling and Wang, Haoyu and Zhang, Hongming and others},
+  booktitle={Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies: Demonstrations},
+  pages={133--143},
+  year={2021}
+}
+</pre>
+</div>
+</li>
+
+
+</ul >
+
+<h4 style="margin-bottom:0px;padding-top:10px;">Tutorial, Symposium, and Workshop Papers</h4>
+
+<!-- Generated from JabRef by PubList by Truong Nghiem at 10:08 on 2017.01.16. -->
+<ul class="biblist">
+
+    <!-- Item: Maninis2018b -->
+<li ><p>
+<a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, K.H. Huang, P. Nakov, and <a href="https://www.cics.umass.edu/people/fiterau-brostean-madalina" target="_blank">H. Ji</a>
+<br><b>The Battlefront of Combating Misinformation and Coping with Media Bias</b><br>
+<i>KDD 2022 and AACL 2022 Tutorial</i>,
+2022.
+<br />
+<a href="javascript:toggleBibtex('Fung2022')">[BibTeX]</a>
+<a href="https://dl.acm.org/doi/abs/10.1145/3534678.3542615" target="_blank">[PDF]</a> <a href="https://khuangaf.github.io/kdd-tutorial-2022/"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_Fung2022" class="bibtex noshow">
+<pre>
+@inproceedings{Fung2022,
+  author = {Y.R. Fung and K.H. Huang and P. Nakov and H. Ji},
+  title = {The Battlefront of Combating Misinformation and Coping with Media Bias},
+  booktitle = {AACL Tutorial},
+  year = {2022}
+}
+</pre>
+</div>
+</li>
+
+    <!-- Item: Maninis2018b -->
+<li ><p>
+<a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, Z. Guan, R. Kumar, J.Y. Wu and <a href="https://www.cics.umass.edu/people/fiterau-brostean-madalina" target="_blank">M. Fiterau</a>
+<br><b>Alzheimers Disease Brain MRI Classification: Challenges and Insights</b><br>
+<i>IJCAI Workshop on AI for Aging, Rehabilitation and Independent Assisted Living</i>,
+2019.
+<br />
+<a href="javascript:toggleBibtex('Fung2019')">[BibTeX]</a>
+<a href="https://arxiv.org/abs/1906.04231" target="_blank">[PDF]</a> <a href="https://github.com/Information-Fusion-Lab-Umass/alzheimers-cnn-study"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_Fung2019" class="bibtex noshow">
+<pre>
+@inproceedings{Fung2019,
+  author = {Y.R. Fung and Z. Guan and J.Y. Wu and M. Fiterau},
+  title = {Alzheimers Disease Brain MRI Classification: Challenges and Insights},
+  booktitle = {IJCAI Workshop on AI for Aging, Rehabilitation and Independent Assisted Living},
+  year = {2019}
+}
+</pre>
+</div>
+</li>
+
+<!-- Item: Farre2017 -->
+<li ><p>
+<a href="https://people.cs.umass.edu/~freedman/" target="_blank">R.G. Freedman</a>, <a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, R. Ganchin, and <a href="https://groups.cs.umass.edu/shlomo/" target="_blank">S. Zilberstein</a>
+<br><b>Responsive Planning and Recognition for Closed-Loop Interaction</b><br>
+<i>AAAI Fall Symposium on Artificial Intelligence for Human-Robot Interaction (AI-HRI)</i>,
+2019.
+<br />
+<a href="javascript:toggleBibtex('Freedman2019')">[BibTeX]</a>
+<a href="https://arxiv.org/abs/1909.06427v1" target="_blank">[PDF]</a> <a href="http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr/"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_Freedman2019" class="bibtex noshow">
+<pre>
+@inproceedings{Freedman2019,
+  author = {R.G. Freedman and Y.R. Fung and R. Ganchin and S. Zilberstein},
+  title = {Responsive Planning and Recognition for Closed-Loop Interaction},
+  booktitle = {AAAI Fall Symposium on Artificial Intelligence for Human-Robot Interaction (AI-HRI)},
+  year = {2019}
+}
+</pre>
+</div>
+</li>
+
+<li ><p>
+<a href="https://people.cs.umass.edu/~freedman/" target="_blank">R.G. Freedman</a>, <a href="yrf1.github.io" target="_blank">Y.R. Fung</a>, R. Ganchin, and <a href="https://groups.cs.umass.edu/shlomo/" target="_blank">S. Zilberstein</a>
+<br><b>Towards Quicker Probabilistic Recognition with Multiple Goal Heuristic Search</b><br>
+<i>AAAI Workshop on Plan, Activity, and Intent Recognition</i>,
+2018.
+<br />
+<a href="javascript:toggleBibtex('Freedman2018')">[BibTeX]</a>
+<a href="https://aaai.org/ocs/index.php/WS/AAAIW18/paper/view/17402" target="_blank">[PDF]</a> <a href="http://www.vision.ee.ethz.ch/~cvlsegmentation/dextr/"  target="_blank">
+[Project Page]</a> 
+</p>
+<div id="bib_Freedman2018" class="bibtex noshow">
+<pre>
+@inproceedings{Freedman2018,
+  author = {R.G. Freedman and Y.R. Fung and R. Ganchin and S. Zilberstein},
+  title = {Towards Quicker Probabilistic Recognition with Multiple Goal Heuristic Search},
+  booktitle = {AAAI Workshop on Plan, Activity, and Intent Recognition},
+  year = {2018}
+}
+</pre>
+</div>
+</li>
+
+
+</div><!-- /.article-wrap -->
+    {% if site.disqus_shortname and page.comments %}
+      <section id="disqus_thread"></section><!-- /#disqus_thread -->
+    {% endif %}
+  </article>
+</div><!-- /#index -->
+<div class="footer-wrap">
+  <footer>
+    {% include _footer.html %}
+  </footer>
+</div><!-- /.footer-wrap -->
+
+{% include _scripts.html %}          
+
+</body>
+</html>
